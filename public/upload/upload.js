@@ -12,5 +12,5 @@ function upload() {
     averagePartLength: '1',
     qualityStandards: '1',
     activity: 'high'
-  })
+  });
 }

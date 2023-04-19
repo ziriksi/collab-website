@@ -213,6 +213,29 @@ input[type="range"]::-webkit-slider-thumb {
     background-size: 100%;
 }
 
+input[type="text"] {
+  border-width: 0px;
+  border-radius: 5px;
+  height: 40px;
+  outline: none;
+  
+  font-family: Pusab;
+  color: var(--text);
+  font-size: 32px;
+  font-weight: normal;
+  text-shadow: 0.375vh 0.375vh 0vh var(--text-sh);
+  -webkit-text-stroke-color: var(--text-outl);
+  -webkit-text-stroke-width: 0.20vh;
+}
+
+input[type="text"]:focus {
+  border-width: 0px;
+}
+
+input[type="text"], textarea {
+  background-color: #543211;
+}
+
 input[type="range"]::-webkit-slider-thumb:active {
     background-image: url("assets/thumb_active.png");
 }
