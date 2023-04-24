@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const db = new (require('@replit/database'))();
-const rateLimit = require('express-rate-limit')
+const rateLimit = require('express-rate-limit');
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -27,7 +27,7 @@ app.post('/upload_collab', rateLimit({
       description: s => s.length < 4000,
       collabType: s => /^(layout|glow|modern|effect|other)$/g.test(s),
       difficulty: s => /^(15star|69star|easydemon|mediumdemon|harddemon|insanedemon|extremedemon|impossible|challenge)$/g.test(s),
-      averagePartLength: s=>  /^(1-4s|5-9s|10-19s|20-40s|40s+)$/g.test(s),
+      averagePartLength: s => /^(1-4s|5-9s|10-19s|20-40s|40s+)$/g.test(s),
       qualityStandards: s => /^(low|mid|high)$/g.test(s),
       activity: s => /^(low|mid|high)$/g.test(s)
     }
